@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.3",
@@ -12,11 +11,6 @@
   },
   "name": "backend",
   "version": "1.0.0",
-=======
-  "name": "backend",
-  "version": "1.0.0",
-  "description": "",
->>>>>>> 486d171d7e192c58981f732f0f1c121cef0d2bf1
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
@@ -26,18 +20,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-<<<<<<< HEAD
   "description": ""
-=======
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^1.20.3",
-    "express": "^4.21.2",
-    "jsonwebtoken": "^9.0.2",
-    "uuid": "^11.0.3"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.9"
-  }
->>>>>>> 486d171d7e192c58981f732f0f1c121cef0d2bf1
 }
