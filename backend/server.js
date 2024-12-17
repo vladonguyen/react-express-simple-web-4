@@ -1,18 +1,18 @@
 const express = require("express");
-const bodyParser = require("body-parser");
-
 const app = express();
 
-app.use((req, res, next)=>{
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    res.setHeader("Access-Control-Allow-Methods", "GET, POST, PATCH, DELETE");
-    res.setHeader("Access-Control-Allow-Headers", "Content-Type", "Authorization");
-    next();
-});
+const bodyParser = require("body-parser");
 
 app.use(bodyParser.json());
 
-const posts = require("./data/posts.js");
-app.use("/posts", posts);
+app.use((req, res, next)=> {
+    res.setHeader("Access-Contro-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type", "Authorization");
+    res.setHeader("Access-Control-Allow-Methods", "GET, POST, PATCH, DELETE");
+    next();
+});
 
-app.listen(3000, ()=> console.log("Server listens on port 3000! Started successfully!"));
+const postsRoutes = require("./routes/posts.js");
+app.use("/posts", postsRoutes);
+
+app.listen(3000, ()=> console.log("Server started and listens on port 3000!"));
